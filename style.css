@@ -1,0 +1,379 @@
+/* Hartwood Ubud Bali - Homepage Styles */
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&display=swap');
+
+:root {
+  /* Colours */
+  --color-primary: #2E2A1F;
+  --color-secondary: #F5EFE6;
+  --color-bg: #FFFFFF;
+  --color-text: #2E2A1F;
+  --color-nav-bg: transparent;
+  --color-cta: #D9D9D9;
+  --color-accent: #C8A96E;
+
+  /* Spacing */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+  --space-nav-height: 140px;
+  --space-page-x: 79px;
+  --space-page-y: 80px;
+  --space-column-gap: 21px;
+  --space-button-gap: 10px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.01em;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: var(--color-accent);
+}
+
+ul {
+  list-style: none;
+}
+
+/* Header / Navigation */
+header {
+  background: var(--color-nav-bg);
+}
+
+nav {
+  min-height: var(--space-nav-height);
+  padding: 0 var(--space-page-x);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-lg);
+}
+
+nav > a {
+  font-size: 24px;
+  color: var(--color-primary);
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xl);
+}
+
+nav li a {
+  font-size: 20px;
+  color: var(--color-primary);
+}
+
+/* Typography */
+h1,
+h2 {
+  color: var(--color-primary);
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 48px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+h3 {
+  color: var(--color-primary);
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+p,
+li,
+figcaption {
+  color: var(--color-text);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.01em;
+}
+
+/* Major Section Spacing */
+main > section {
+  padding: var(--space-page-y) var(--space-page-x);
+}
+
+section + section {
+  margin-top: var(--space-page-y);
+}
+
+/* Hero Photo Gallery
+   The source design does not require a separate hero banner background.
+   This styles the top photo gallery only. */
+main > section:first-of-type {
+  padding-top: 0;
+}
+
+main > section:first-of-type h1 {
+  margin-bottom: var(--space-xl);
+}
+
+main > section:first-of-type > div {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--space-column-gap);
+}
+
+main > section:first-of-type > div > figure {
+  min-height: 620px;
+}
+
+main > section:first-of-type > div > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-column-gap);
+}
+
+main > section:first-of-type > div > div figure {
+  min-height: 299px;
+}
+
+figure {
+  overflow: hidden;
+  background: var(--color-secondary);
+}
+
+figcaption {
+  padding-top: var(--space-sm);
+}
+
+/* Two-Column Content Sections */
+section > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-column-gap);
+  align-items: stretch;
+}
+
+article {
+  background: var(--color-secondary);
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-button-gap);
+}
+
+article h2,
+article h3 {
+  margin-bottom: var(--space-sm);
+}
+
+/* Amenities */
+#amenities {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+#amenities > h2 {
+  margin-bottom: var(--space-sm);
+}
+
+#amenities article {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: var(--space-column-gap);
+  align-items: stretch;
+  background: transparent;
+  padding: 0;
+}
+
+#amenities article > div {
+  background: var(--color-secondary);
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-button-gap);
+}
+
+#amenities label,
+#amenities li {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+/* Location */
+#location ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  list-style: disc;
+  padding-left: var(--space-lg);
+}
+
+#location li {
+  display: list-item;
+}
+
+/* Photo Carousel Structure */
+#photos {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+#photos > div {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: var(--space-column-gap);
+}
+
+#photos > div > div {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--space-column-gap);
+}
+
+#photos figure {
+  min-height: 260px;
+}
+
+/* Buttons / Book Now */
+button,
+#book-now a {
+  background: var(--color-cta);
+  color: var(--color-primary);
+  border: none;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  padding: 12px 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-button-gap);
+  cursor: pointer;
+}
+
+button:hover,
+button:focus,
+#book-now a:hover,
+#book-now a:focus {
+  background: var(--color-accent);
+  color: var(--color-primary);
+}
+
+#book-now {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-button-gap);
+}
+
+#book-now p {
+  max-width: 760px;
+}
+
+/* Footer */
+footer {
+  padding: var(--space-page-y) var(--space-page-x);
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: var(--space-lg);
+  color: var(--color-primary);
+}
+
+footer > div:nth-child(2) {
+  text-align: center;
+}
+
+footer > div:last-child {
+  justify-self: end;
+}
+
+footer ul {
+  display: flex;
+  gap: var(--space-lg);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 900px) {
+  :root {
+    --space-page-x: 24px;
+    --space-page-y: 48px;
+    --space-nav-height: 100px;
+  }
+
+  nav,
+  nav ul,
+  footer,
+  section > div,
+  main > section:first-of-type > div,
+  #amenities article,
+  #photos > div,
+  #photos > div > div {
+    grid-template-columns: 1fr;
+  }
+
+  nav {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  nav ul,
+  footer ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  footer {
+    text-align: center;
+  }
+
+  footer > div:last-child {
+    justify-self: center;
+  }
+
+  h1,
+  h2 {
+    font-size: 38px;
+  }
+}
