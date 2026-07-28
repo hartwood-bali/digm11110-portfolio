@@ -1,0 +1,514 @@
+/* Hartwood Ubud Bali - Homepage CSS */
+
+:root {
+  --color-primary: #2E2A1F;
+  --color-secondary: #F5EFE6;
+  --color-bg: #FFFFFF;
+  --color-text: #2E2A1F;
+  --color-nav-bg: transparent;
+  --color-cta: #D9D9D9;
+  --color-accent: #C8A96E;
+
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+  --space-nav-height: 140px;
+  --space-page-x: 79px;
+  --space-page-y: 80px;
+  --space-column-gap: 21px;
+  --space-button-gap: 10px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.01em;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 250ms ease, background-color 250ms ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--color-accent);
+}
+
+button {
+  font-family: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+figure {
+  background: var(--color-secondary);
+  overflow: hidden;
+}
+
+/* Header / nav */
+.site-header {
+  background: var(--color-nav-bg);
+}
+
+.site-nav {
+  min-height: var(--space-nav-height);
+  padding: 0 var(--space-page-x);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-lg);
+}
+
+.site-logo {
+  font-size: 24px;
+  color: var(--color-primary);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xl);
+}
+
+.nav-links a {
+  font-size: 20px;
+}
+
+.nav-cta,
+.book-button,
+.carousel-btn {
+  background: var(--color-cta);
+  color: var(--color-primary);
+  padding: 12px 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-button-gap);
+}
+
+.nav-cta:hover,
+.nav-cta:focus,
+.book-button:hover,
+.book-button:focus,
+.carousel-btn:hover,
+.carousel-btn:focus {
+  background: var(--color-accent);
+  color: var(--color-primary);
+}
+
+/* Typography */
+h1,
+h2 {
+  color: var(--color-primary);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 48px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+h3 {
+  color: var(--color-primary);
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+p,
+li {
+  color: var(--color-text);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: 0.01em;
+}
+
+/* Major sections */
+main > section {
+  padding: var(--space-page-y) var(--space-page-x);
+}
+
+section + section {
+  margin-top: var(--space-page-y);
+}
+
+/* 1. Hero gallery */
+.hero-gallery {
+  padding-top: 0;
+}
+
+.hero-gallery h1 {
+  margin-bottom: var(--space-xl);
+  max-width: 980px;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--space-column-gap);
+}
+
+.hero-main-image {
+  min-height: 640px;
+}
+
+.hero-small-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-column-gap);
+}
+
+.hero-small-grid figure {
+  min-height: 309.5px;
+}
+
+/* 2-column sections */
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-column-gap);
+  align-items: stretch;
+}
+
+.text-card {
+  background: var(--color-secondary);
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-button-gap);
+}
+
+.text-card h2,
+.text-card h3 {
+  margin-bottom: var(--space-sm);
+}
+
+.section-image {
+  min-height: 520px;
+}
+
+/* 4. Amenities */
+.amenities-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.amenities-layout {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: var(--space-column-gap);
+  align-items: stretch;
+}
+
+.amenities-card {
+  background: var(--color-secondary);
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-lg);
+}
+
+.amenities-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+}
+
+.amenities-columns ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.amenities-columns li {
+  position: relative;
+  padding-left: 28px;
+}
+
+.amenities-columns li::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  border: 1px solid var(--color-primary);
+  background: var(--color-bg);
+  position: absolute;
+  left: 0;
+  top: 5px;
+}
+
+.amenities-image {
+  min-height: 460px;
+}
+
+/* 5. Location / map */
+.map-frame {
+  min-height: 520px;
+}
+
+.map-frame iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 520px;
+  border: 0;
+  display: block;
+}
+
+.attraction-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  list-style: disc;
+  padding-left: var(--space-lg);
+}
+
+.attraction-list li {
+  display: list-item;
+}
+
+/* 6. Photos carousel */
+.photos-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.carousel {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.carousel-viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 600ms ease;
+  will-change: transform;
+  touch-action: pan-y;
+}
+
+.carousel-slide {
+  flex: 0 0 50%;
+  padding: 0 calc(var(--space-column-gap) / 2);
+}
+
+.carousel-slide img {
+  height: 520px;
+  background: var(--color-secondary);
+}
+
+.carousel-btn {
+  width: 52px;
+  height: 52px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 26px;
+  line-height: 1;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.carousel-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 999px;
+  border: 1px solid var(--color-primary);
+  background: transparent;
+  cursor: pointer;
+  transition: background-color 250ms ease, transform 250ms ease;
+}
+
+.carousel-dot.is-active {
+  background: var(--color-primary);
+  transform: scale(1.12);
+}
+
+/* Book section */
+.book-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-button-gap);
+}
+
+.book-section p {
+  max-width: 760px;
+}
+
+/* Footer */
+.site-footer {
+  padding: var(--space-page-y) var(--space-page-x);
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+.site-footer > div:nth-child(2) {
+  text-align: center;
+}
+
+.site-footer > div:last-child {
+  justify-self: end;
+}
+
+.footer-links {
+  display: flex;
+  gap: var(--space-lg);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  :root {
+    --space-page-x: 24px;
+    --space-page-y: 48px;
+    --space-nav-height: 110px;
+  }
+
+  .site-nav {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .nav-links,
+  .footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-md);
+  }
+
+  h1,
+  h2 {
+    font-size: 38px;
+  }
+
+  .hero-grid,
+  .two-column,
+  .amenities-layout,
+  .site-footer {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-small-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-main-image,
+  .hero-small-grid figure,
+  .section-image,
+  .amenities-image,
+  .map-frame,
+  .map-frame iframe {
+    min-height: 360px;
+  }
+
+  .reverse-on-mobile figure {
+    order: 2;
+  }
+
+  .reverse-on-mobile article {
+    order: 1;
+  }
+
+  .amenities-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .carousel {
+    grid-template-columns: 1fr;
+  }
+
+  .carousel-btn-prev,
+  .carousel-btn-next {
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    transform: translateY(-50%);
+  }
+
+  .carousel-btn-prev {
+    left: var(--space-sm);
+  }
+
+  .carousel-btn-next {
+    right: var(--space-sm);
+  }
+
+  .carousel-slide {
+    flex-basis: 100%;
+    padding: 0;
+  }
+
+  .carousel-slide img {
+    height: 420px;
+  }
+
+  .site-footer {
+    text-align: center;
+  }
+
+  .site-footer > div:last-child {
+    justify-self: center;
+  }
+}
+
+@media (max-width: 520px) {
+  .carousel-slide img {
+    height: 330px;
+  }
+
+  .hero-main-image,
+  .hero-small-grid figure,
+  .section-image,
+  .amenities-image,
+  .map-frame,
+  .map-frame iframe {
+    min-height: 300px;
+  }
+}
